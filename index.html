@@ -155,33 +155,54 @@ input,textarea,select{font:inherit}
       <div style="display:flex;flex-direction:column;gap:20px">
         <span style="font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#a9c9a8">Get in touch</span>
         <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.1;letter-spacing:-0.02em">Enquire about lessons</h2>
-        <p style="margin:0;font-size:16px;line-height:1.7;color:#b9cbb7">Drop me a message and I’ll get back to you within a day. Current students can use this form to rearrange a lesson too.</p>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:#b9cbb7">Drop me an email or give me a call and I’ll get back to you within a day. Current students can get in touch the same way to rearrange a lesson.</p>
         <div style="display:flex;flex-direction:column;gap:8px;font-size:15px;padding-top:8px">
           <a href="mailto:hello@greenlilypiano.co.uk" style="color:#eef3ea">hello@greenlilypiano.co.uk</a>
           <a href="tel:+447751425466" style="color:#eef3ea">07751 425466</a>
         </div>
       </div>
       
-      <form action="mailto:hello@greenlilypiano.co.uk" method="post" enctype="text/plain" style="background:#2a3b31;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px">
-        <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#b9cbb7">Your name
-          <input required="" name="name" style="background:#1d2b23;border:1px solid #3d5546;border-radius:10px;padding:13px 14px;color:#eef3ea;outline:none">
-        </label>
-        <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#b9cbb7">Email
-          <input required="" type="email" name="email" style="background:#1d2b23;border:1px solid #3d5546;border-radius:10px;padding:13px 14px;color:#eef3ea;outline:none">
-        </label>
-        <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#b9cbb7">I'm enquiring about
-          <select name="topic" style="background:#1d2b23;border:1px solid #3d5546;border-radius:10px;padding:13px 14px;color:#eef3ea;outline:none">
-            <option>An introductory lesson</option>
-            <option>Rearranging a lesson</option>
-            <option>Songwriting</option>
-            <option>Something else</option>
-          </select>
-        </label>
-        <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#b9cbb7">Message
-          <textarea name="message" rows="4" style="background:#1d2b23;border:1px solid #3d5546;border-radius:10px;padding:13px 14px;color:#eef3ea;outline:none;resize:vertical"></textarea>
-        </label>
-        <button type="submit" style="all:unset;cursor:pointer;text-align:center;background:#a9c9a8;color:#1d2b23;padding:15px;border-radius:999px;font-weight:700;font-size:15px">Send message</button>
-      </form>
+      <div id="piano-hero" style="background:#2a3b31;border-radius:16px;padding:32px;display:flex;gap:28px;align-items:center;flex-wrap:wrap">
+        <div class="ph-phone" aria-hidden="true">
+          <div class="ph-screen">
+            <div class="ph-score">Score 1,240</div>
+            <div class="ph-lanes">
+              <span class="ph-n" style="left:2%;animation-delay:0s"></span>
+              <span class="ph-n" style="left:27%;animation-delay:.6s"></span>
+              <span class="ph-n ph-long" style="left:52%;animation-delay:1.2s"></span>
+              <span class="ph-n" style="left:77%;animation-delay:1.8s"></span>
+              <span class="ph-n" style="left:27%;animation-delay:2.4s"></span>
+              <span class="ph-n" style="left:52%;animation-delay:3s"></span>
+            </div>
+            <div class="ph-keys"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#a9c9a8">Coming soon</span>
+          <h3 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:32px;line-height:1.1">Piano Hero</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#b9cbb7">Practice that feels like a game. Notes fall towards the keyboard: play them in time to score points and build combos. Plug in your own keyboard or just tap the keys on screen.</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14px;color:#eef3ea">
+            <li>✓ Works with MIDI keyboards</li>
+            <li>✓ Scores, accuracy and combos</li>
+            <li>✓ For iPhone and iPad</li>
+          </ul>
+          <span style="align-self:flex-start;margin-top:6px;border:1px solid #a9c9a8;color:#a9c9a8;padding:11px 20px;border-radius:999px;font-weight:600;font-size:14px;white-space:nowrap">Coming soon to the App Store</span>
+        </div>
+      </div>
+      <style>
+        .ph-phone{flex:0 0 150px;height:300px;margin:0 auto;border-radius:28px;background:#111916;padding:8px;box-shadow:0 24px 48px -20px rgba(0,0,0,.6),inset 0 0 0 1px #3d5546}
+        .ph-screen{position:relative;height:100%;border-radius:21px;overflow:hidden;background:linear-gradient(#1d2b23,#24483a);display:flex;flex-direction:column}
+        .ph-score{font-family:'JetBrains Mono',monospace;font-size:10px;color:#a9c9a8;padding:14px 12px 6px;text-align:center}
+        .ph-lanes{position:relative;flex:1;overflow:hidden;margin:0 8px;background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),rgba(169,201,168,.12) calc(25% - 1px) 25%)}
+        .ph-n{position:absolute;top:-44px;width:21%;height:22px;border-radius:5px;background:#a9c9a8;box-shadow:0 0 12px rgba(169,201,168,.55);animation:ph-fall 3.6s linear infinite}
+        .ph-long{height:44px}
+        @keyframes ph-fall{0%{top:-44px}100%{top:100%}}
+        .ph-keys{display:flex;gap:3px;height:56px;padding:4px 8px 10px}
+        .ph-keys i{flex:1;background:#f6f5f0;border-radius:0 0 5px 5px;animation:ph-press 3.6s linear infinite}
+        .ph-keys i:nth-child(2){animation-delay:.6s}.ph-keys i:nth-child(3){animation-delay:1.2s}.ph-keys i:nth-child(4){animation-delay:1.8s}
+        @keyframes ph-press{0%,87%,100%{background:#f6f5f0}90%,96%{background:#a9c9a8}}
+        @media (prefers-reduced-motion:reduce){.ph-n,.ph-keys i{animation:none}.ph-n{top:40%}}
+      </style>
     </div>
   </section>
 </main>
