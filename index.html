@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="assets/green-lily-logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>Green Lily Piano | Piano Lessons in Tunbridge Wells</title>
 <meta name="description" content="Relaxed one-to-one piano lessons for children and adults in Tunbridge Wells and online. No pressure, and no exams unless you want them. Lessons from £25.">
 <link rel="canonical" href="https://greenlilypiano.co.uk/">
@@ -190,24 +190,7 @@ section.block{padding:clamp(80px,12vw,140px) 0}
 .day span:last-child{color:var(--soft)}
 .day.wk span:last-child{color:var(--green2)}
 
-.ph-wrap{display:flex;justify-content:center;margin-top:64px}
-.ph-phone{width:250px;height:510px;border-radius:48px;background:#141c17;padding:12px;box-shadow:0 0 0 2px #2c3a31,0 40px 140px -10px rgba(143,224,162,.32)}
-.ph-screen{position:relative;height:100%;border-radius:37px;overflow:hidden;background:linear-gradient(#0f1a14,#1d3a2a);display:flex;flex-direction:column}
-.ph-score{font-family:'JetBrains Mono',monospace;font-size:13px;color:#a9d9a0;padding:28px 12px 10px;text-align:center}
-.ph-lanes{position:relative;flex:1;overflow:hidden;margin:0 12px;background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),rgba(169,217,160,.12) calc(25% - 1px) 25%)}
-.ph-n{position:absolute;top:-70px;width:21%;height:34px;border-radius:8px;background:#a9d9a0;box-shadow:0 0 18px rgba(169,217,160,.6);animation:ph-fall 3.6s linear infinite}
-.ph-long{height:70px}
-@keyframes ph-fall{0%{top:-70px}100%{top:100%}}
-.ph-keys{display:flex;gap:4px;height:96px;padding:6px 12px 18px}
-.ph-keys i{flex:1;background:#f5f5f7;border-radius:0 0 8px 8px;animation:ph-press 3.6s linear infinite}
-.ph-keys i:nth-child(2){animation-delay:.6s}.ph-keys i:nth-child(3){animation-delay:1.2s}.ph-keys i:nth-child(4){animation-delay:1.8s}
-@keyframes ph-press{0%,87%,100%{background:#f5f5f7}90%,96%{background:#a9d9a0}}
-.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:32px;margin-top:72px;text-align:center}
-.feats b{display:block;font-size:21px;letter-spacing:-.01em}
-.feats span{display:block;color:var(--soft);font-size:15px;margin-top:6px;line-height:1.5}
-.soon{display:inline-flex;align-items:center;gap:10px;margin-top:28px;border:1px solid #2f4337;border-radius:980px;padding:12px 22px 12px 18px;font-size:15px;color:#f2f4ef;background:linear-gradient(180deg,#17251d,#0d1611);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 12px 30px -14px rgba(143,224,162,.35)}
-.soon .dot{width:8px;height:8px;border-radius:50%;background:#8fe0a2;box-shadow:0 0 0 0 rgba(143,224,162,.6);animation:pulse 2.2s ease-out infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(143,224,162,.55)}80%,100%{box-shadow:0 0 0 10px rgba(143,224,162,0)}}
+.trial{display:inline-flex;align-items:center;gap:10px;margin-top:22px;border-radius:980px;padding:10px 20px;font-size:16px;font-weight:600;color:var(--green);background:#eaf4ec}
 
 .contact a.big{display:block;font-size:clamp(26px,4vw,44px);font-weight:700;letter-spacing:-.03em;margin-top:8px}
 
@@ -216,7 +199,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.ph-n,.ph-keys i{animation:none}.ph-n{top:40%}.statement{height:auto}.statement .stick{position:static;height:auto;padding:120px 0}.statement p span{opacity:1}.soon .dot{animation:none}.price:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.statement{height:auto}.statement .stick{position:static;height:auto;padding:120px 0}.statement p span{opacity:1}.price:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -228,7 +211,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <a href="#about">About</a>
       <a href="#lessons">Lessons</a>
       <a href="#timetable">Timetable</a>
-      <a href="#piano-hero">Piano Hero</a>
       <a href="#contact" class="pill sm">Book a lesson</a>
     </nav>
   </div>
@@ -241,9 +223,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <h1>Fall in love with <span class="grad" style="white-space:nowrap">the piano.</span></h1>
       <p class="lede">Relaxed one-to-one lessons for children and adults. No pressure, and no exams unless you want them. Just the music you love.</p>
       <div class="ctas">
-        <a href="#contact" class="pill">Enquire about lessons <span class="arr" aria-hidden="true">→</span></a>
+        <a href="#contact" class="pill">Book a free trial <span class="arr" aria-hidden="true">→</span></a>
         <a href="#lessons" class="ghost">View lesson fees <span class="chev" aria-hidden="true">›</span></a>
       </div>
+      <p class="trial">Your first 15-minute lesson is free</p>
     </div>
     <div class="stage"><div class="frame" id="grow"><img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" alt="Grand piano in a quiet room"></div></div>
   </section>
@@ -283,7 +266,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <div class="wrap">
       <div class="center reveal">
         <h2 class="h2">Pick a lesson length.</h2>
-        <p class="sub">Fees are payable half-termly in advance.</p>
+        <p class="sub">Start with a free 15-minute trial lesson. Fees are payable half-termly in advance.</p>
       </div>
       <div class="prices">
         <div class="price reveal"><span class="tag">Great for beginners</span><span class="len">30 minutes</span><span class="amt">£25</span><span class="per">per lesson</span><p>A relaxed introduction, ideal for children and first-time players.</p></div>
@@ -312,42 +295,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     </div>
   </section>
 
-  <section id="piano-hero" class="dark block" style="padding-top:0">
-    <div class="wrap center">
-      <div class="reveal">
-        <p class="eyebrow" style="color:var(--soft)">Coming soon</p>
-        <h2 class="grad" style="font-size:clamp(56px,10vw,120px);font-weight:700;letter-spacing:-.04em;line-height:1">Piano Hero</h2>
-        <p class="sub muted">Practice that feels like a game.</p>
-      </div>
-      <div class="ph-wrap reveal" aria-hidden="true">
-        <div class="ph-phone"><div class="ph-screen">
-          <div class="ph-score">Score 1,240</div>
-          <div class="ph-lanes">
-            <span class="ph-n" style="left:2%;animation-delay:0s"></span>
-            <span class="ph-n" style="left:27%;animation-delay:.6s"></span>
-            <span class="ph-n ph-long" style="left:52%;animation-delay:1.2s"></span>
-            <span class="ph-n" style="left:77%;animation-delay:1.8s"></span>
-            <span class="ph-n" style="left:27%;animation-delay:2.4s"></span>
-            <span class="ph-n" style="left:52%;animation-delay:3s"></span>
-          </div>
-          <div class="ph-keys"><i></i><i></i><i></i><i></i></div>
-        </div></div>
-      </div>
-      <div class="feats reveal">
-        <div><b>Falling notes</b><span>Play them in time to score points and build combos.</span></div>
-        <div><b>Bring your keyboard</b><span>Works with MIDI keyboards, or tap the keys on screen.</span></div>
-        <div><b>iPhone and iPad</b><span>Practice anywhere, between lessons.</span></div>
-      </div>
-      <span class="soon reveal"><span class="dot" aria-hidden="true"></span>Coming soon to the App Store</span>
-    </div>
-  </section>
 
   <section id="contact" class="light block contact">
     <div class="wrap center reveal">
       <h2 class="h2">Get in touch.</h2>
-      <p class="sub">Drop me an email or give me a call and I’ll get back to you within a day.<br>Current students can get in touch the same way to rearrange a lesson.</p>
+      <p class="sub">Book your free 15-minute trial lesson by email or phone, and I’ll get back to you within a day.<br>Current students can get in touch the same way to rearrange a lesson.</p>
       <div style="margin-top:36px">
-        <a class="big" href="mailto:hello@greenlilypiano.co.uk">hello@greenlilypiano.co.uk</a>
+        <a class="big" href="mailto:hello@greenlilypiano.co.uk?subject=Free%20trial%20lesson">hello@greenlilypiano.co.uk</a>
         <a class="big" href="tel:+447751425466">07751 425466</a>
       </div>
     </div>
