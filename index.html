@@ -190,6 +190,17 @@ section.block{padding:clamp(80px,12vw,140px) 0}
 .day span:last-child{color:var(--soft)}
 .day.wk span:last-child{color:var(--green2)}
 
+.tform{max-width:560px;margin:44px auto 0;text-align:left;background:#fff;border-radius:24px;padding:28px;box-shadow:0 1px 0 rgba(20,26,22,.04),0 24px 60px -30px rgba(20,60,35,.35)}
+.tform h3{font-size:24px;letter-spacing:-.02em;margin:0 0 4px}
+.tform p.hint{color:var(--muted);font-size:15px;margin:0 0 18px}
+.tform label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+.tform input,.tform select,.tform textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid #dcdbd3;border-radius:12px;background:#fcfcf9;color:var(--ink)}
+.tform input:focus,.tform select:focus,.tform textarea:focus{outline:2px solid #3a8f5c;outline-offset:1px}
+.tform textarea{min-height:90px;resize:vertical}
+.tform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.tform .row{grid-template-columns:1fr}}
+.tform button{margin-top:22px;border:0;cursor:pointer;font:inherit}
+.tform small{display:block;color:var(--muted);font-size:13px;margin-top:12px}
 .trial{display:inline-flex;align-items:center;gap:10px;margin-top:22px;border-radius:980px;padding:10px 20px;font-size:16px;font-weight:600;color:var(--green);background:#eaf4ec}
 
 .contact a.big{display:block;font-size:clamp(26px,4vw,44px);font-weight:700;letter-spacing:-.03em;margin-top:8px}
@@ -304,6 +315,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <a class="big" href="mailto:hello@greenlilypiano.co.uk?subject=Free%20trial%20lesson">hello@greenlilypiano.co.uk</a>
         <a class="big" href="tel:+447751425466">07751 425466</a>
       </div>
+      <form class="tform" id="trial-form">
+        <h3>Request your free trial</h3>
+        <p class="hint">Fill this in and it opens a ready-written email to send me. I’ll reply within a day.</p>
+        <div class="row">
+          <div><label for="tf-name">Your name</label><input id="tf-name" required autocomplete="name"></div>
+          <div><label for="tf-phone">Phone (optional)</label><input id="tf-phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <label for="tf-who">Who are the lessons for?</label>
+        <select id="tf-who"><option>Me (adult)</option><option>My child</option><option>More than one person</option></select>
+        <div class="row">
+          <div><label for="tf-level">Experience</label><select id="tf-level"><option>Complete beginner</option><option>Played a little before</option><option>Returning player</option></select></div>
+          <div><label for="tf-where">Lessons</label><select id="tf-where"><option>In person</option><option>Online</option><option>Not sure yet</option></select></div>
+        </div>
+        <label for="tf-when">Best days and times</label>
+        <input id="tf-when" placeholder="e.g. Saturday mornings, or weekday evenings">
+        <label for="tf-msg">Anything else? (optional)</label>
+        <textarea id="tf-msg" placeholder="e.g. my daughter is 8 and loves pop songs"></textarea>
+        <button type="submit" class="pill">Send request <span class="arr" aria-hidden="true">→</span></button>
+        <small>Nothing is stored on this website. It just opens your email app.</small>
+      </form>
     </div>
   </section>
 </main>
@@ -338,6 +369,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
   addEventListener('resize',update);update();
 })();
+</script>
+<script>
+document.getElementById('trial-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(id){return document.getElementById(id).value.trim()};
+  var body='Hi Reagan,\n\nI\'d like to book a free 30-minute trial lesson.\n\n'+
+    'Name: '+v('tf-name')+'\n'+(v('tf-phone')?'Phone: '+v('tf-phone')+'\n':'')+
+    'Lessons for: '+v('tf-who')+'\nExperience: '+v('tf-level')+'\nIn person or online: '+v('tf-where')+'\n'+
+    'Best days and times: '+(v('tf-when')||'flexible')+'\n'+(v('tf-msg')?'\n'+v('tf-msg')+'\n':'')+'\nThanks!';
+  location.href='mailto:hello@greenlilypiano.co.uk?subject='+encodeURIComponent('Free trial lesson request: '+v('tf-name'))+'&body='+encodeURIComponent(body);
+});
 </script>
 </body>
 </html>
